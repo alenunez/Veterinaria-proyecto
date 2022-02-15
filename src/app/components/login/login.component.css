@@ -1,0 +1,47 @@
+form{
+    margin: auto auto;
+    width: 300px;
+    display: block;
+    background-color: #FBAE4B;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+img{
+    margin-left: auto;
+}
+h2{
+text-align: center;
+    }
+form div{
+    padding: 5px 0;
+}
+form{
+    margin-left: 37%;
+    margin-top: 12%;
+
+}
+form label{
+    margin-left: 5%;
+
+    display: block;
+    padding: 10px 0;
+}
+form input[type=text]{
+    margin-left: 5%;
+    width: 80%;
+    padding: 5px;
+
+}
+form input[type=password]{
+    margin-left: 5%;
+    width: 80%;
+    padding: 5px;
+
+}
+form input[type=submit]{
+    margin-left: 25%;
+    width: 40%;
+    padding: 5px;
+    border-radius: 10%;
+
+}
