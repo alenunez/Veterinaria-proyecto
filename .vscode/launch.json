@@ -3,6 +3,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch EjemploClaseApplication",
+      "request": "launch",
+      "mainClass": "com.example.ejemploClase.EjemploClaseApplication",
+      "projectName": "ejemploClase"
+    },
+    {
       "name": "ng serve",
       "type": "pwa-chrome",
       "request": "launch",

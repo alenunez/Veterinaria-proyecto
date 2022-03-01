@@ -12,6 +12,8 @@ import { DoctorsComponent } from './components/doctors/doctors.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GaleryComponent } from './components/galery/galery.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+     FormsModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

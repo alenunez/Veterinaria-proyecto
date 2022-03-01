@@ -2,18 +2,19 @@
 
 <app-menu></app-menu>
     <div id="formLogin">
-        <form action="" class="login">
+        <form  class="login">
             <h2>Iniciar sesion</h2>
             <div>
                 <label for="userName">Nombre de usuario</label>
-                <input type="text" name="userName" id="userName">
+                <input type="text" name="usuario" id="userName">
             </div>
             <div>
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password">
             </div>
             <div>
-                <input type="button" id="botonInicio" value="Iniciar sesion">
+                <button a [outerHTML]=""></button>
+                <a routerLink="/dashboard"> <input type="submit" id="botonInicio" value="Iniciar sesion" > </a>
             </div>
         </form>
     </div>
