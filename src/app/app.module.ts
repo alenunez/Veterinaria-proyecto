@@ -11,9 +11,11 @@ import { ServicesComponent } from './components/services/services.component';
 import { DoctorsComponent } from './components/doctors/doctors.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GaleryComponent } from './components/galery/galery.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
+import { HomeVeterinarioComponent } from './components/veterinario/home-veterinario/home-veterinario.component';
+import { HomeClienteComponent } from './components/cliente/home-cliente/home-cliente.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import {HttpClientModule} from '@angular/common/http';
     DoctorsComponent,
     ContactComponent,
     GaleryComponent,
-    DashboardComponent,
+    HomeAdminComponent,
+    HomeVeterinarioComponent,
+    HomeClienteComponent,
   ],
   imports: [
     BrowserModule,

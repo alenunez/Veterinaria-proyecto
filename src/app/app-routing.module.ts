@@ -1,4 +1,4 @@
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
 import { ServicesComponent } from './components/services/services.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -34,8 +34,8 @@ const routes: Routes = [
     component:GaleryComponent
   },
   {
-    path: 'dashboard',
-    component:DashboardComponent
+    path: 'homeAdmin',
+    component:HomeAdminComponent
   }
 ];
 
