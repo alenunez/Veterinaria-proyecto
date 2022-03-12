@@ -1,3 +1,6 @@
+import { SolicitarCitaClienteComponent } from './components/cliente/solicitar-cita-cliente/solicitar-cita-cliente.component';
+import { CitasClienteComponent } from './components/cliente/citas-cliente/citas-cliente.component';
+import { MascotasComponent } from './components/cliente/mascotas/mascotas.component';
 import { HomeClienteComponent } from './components/cliente/home-cliente/home-cliente.component';
 import { HomeVeterinarioComponent } from './components/veterinario/home-veterinario/home-veterinario.component';
 import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
@@ -45,8 +48,22 @@ const routes: Routes = [
   },
   {
     path: 'homeCliente',
-    component: HomeClienteComponent
+    component: HomeClienteComponent    
+  },
+  {
+    path: 'clienteMascota',
+    component: MascotasComponent    
+  },
+  {
+    path: 'citasCliente',
+    component: CitasClienteComponent   
   }
+  ,
+  {
+    path: 'solicitarCitaCliente',
+    component: SolicitarCitaClienteComponent  
+  }
+
 ];
 
 @NgModule({

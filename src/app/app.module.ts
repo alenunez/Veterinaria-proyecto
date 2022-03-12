@@ -16,6 +16,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
 import { HomeVeterinarioComponent } from './components/veterinario/home-veterinario/home-veterinario.component';
 import { HomeClienteComponent } from './components/cliente/home-cliente/home-cliente.component';
+import { MascotasComponent } from './components/cliente/mascotas/mascotas.component';
+import { MenuClienteComponent } from './components/cliente/menu-cliente/menu-cliente.component';
+import { CitasClienteComponent } from './components/cliente/citas-cliente/citas-cliente.component';
+import { SolicitarCitaClienteComponent } from './components/cliente/solicitar-cita-cliente/solicitar-cita-cliente.component';
+import { MenuVeterinarioComponent } from './components/veterinario/menu-veterinario/menu-veterinario.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,11 @@ import { HomeClienteComponent } from './components/cliente/home-cliente/home-cli
     HomeAdminComponent,
     HomeVeterinarioComponent,
     HomeClienteComponent,
+    MascotasComponent,
+    MenuClienteComponent,
+    CitasClienteComponent,
+    SolicitarCitaClienteComponent,
+    MenuVeterinarioComponent,
   ],
   imports: [
     BrowserModule,
