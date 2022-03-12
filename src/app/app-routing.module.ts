@@ -1,3 +1,5 @@
+import { HomeClienteComponent } from './components/cliente/home-cliente/home-cliente.component';
+import { HomeVeterinarioComponent } from './components/veterinario/home-veterinario/home-veterinario.component';
 import { HomeAdminComponent } from './components/admin/home-admin/home-admin.component';
 import { ServicesComponent } from './components/services/services.component';
 import { NgModule } from '@angular/core';
@@ -11,11 +13,11 @@ import { GaleryComponent } from './components/galery/galery.component';
 const routes: Routes = [
   {
     path: '',
-    component:HomeComponent
+    component: HomeComponent
   },
   {
     path: 'login',
-    component:LoginComponent
+    component: LoginComponent
   },
   {
     path: 'services',
@@ -27,15 +29,23 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    component:ContactComponent
+    component: ContactComponent
   },
   {
     path: 'galery',
-    component:GaleryComponent
+    component: GaleryComponent
   },
   {
     path: 'homeAdmin',
-    component:HomeAdminComponent
+    component: HomeAdminComponent
+  },
+  {
+    path: 'homeVeterinario',
+    component: HomeVeterinarioComponent
+  },
+  {
+    path: 'homeCliente',
+    component: HomeClienteComponent
   }
 ];
 
