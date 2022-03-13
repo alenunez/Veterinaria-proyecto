@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit{
         console.log(this.usuario)
         localStorage.setItem("usuario", JSON.stringify(this.usuario)); 
         sessionStorage.setItem("correoUsuario",this.usuario.correo)
+        sessionStorage.setItem("rol",this.usuario.rol);
         if(this.usuario.rol=="administrador"){
           location.href="/homeAdmin"
         }

@@ -1,3 +1,5 @@
+import { AdminMascotasComponent } from './components/admin/admin-mascotas/admin-mascotas.component';
+import { AdminCitasComponent } from './components/admin/admin-citas/admin-citas.component';
 import { VeterinarioCitasComponent } from './components/veterinario/veterinario-citas/veterinario-citas.component';
 import { VeterinarioMascotasComponent } from './components/veterinario/veterinario-mascotas/veterinario-mascotas.component';
 import { VeterinarioClientesComponent } from './components/veterinario/veterinario-clientes/veterinario-clientes.component';
@@ -15,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DoctorsComponent } from './components/doctors/doctors.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GaleryComponent } from './components/galery/galery.component';
+import { AdminUsuariosComponent } from './components/admin/admin-usuarios/admin-usuarios.component';
 
 const routes: Routes = [
   {
@@ -79,7 +82,20 @@ const routes: Routes = [
     path: 'veterinarioCitas',
     component: VeterinarioCitasComponent  
   }
-
+  ,
+  {
+    path: 'adminUsuarios',
+    component: AdminUsuariosComponent  
+  }
+  ,
+  {
+    path: 'adminCitas',
+    component: AdminCitasComponent 
+  } ,
+  {
+    path: 'adminMascotas',
+    component: AdminMascotasComponent  
+  }
 ];
 
 @NgModule({

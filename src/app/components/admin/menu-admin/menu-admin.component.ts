@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/modelos/usuario';
 
 @Component({
-  selector: 'app-menu-veterinario',
-  templateUrl: './menu-veterinario.component.html',
-  styleUrls: ['./menu-veterinario.component.css']
+  selector: 'app-menu-admin',
+  templateUrl: './menu-admin.component.html',
+  styleUrls: ['./menu-admin.component.css']
 })
-export class MenuVeterinarioComponent implements OnInit {
+export class MenuAdminComponent implements OnInit {
   usuario:any={};
   rol:any={};
+
 
   constructor() { }
 
@@ -17,8 +19,8 @@ export class MenuVeterinarioComponent implements OnInit {
     if(!this.usuario){
       location.href="/";
     }
-    else if(this.rol =="administrador"){
-      location.href="/homeAdmin";
+    else if(this.rol =="veterinario"){
+      location.href="/homeVeterinario";
 
     }
     else if(this.rol =="cliente"){
@@ -26,12 +28,10 @@ export class MenuVeterinarioComponent implements OnInit {
 
     }
   }
-
   logout(){
     localStorage.removeItem("usuario");
     sessionStorage.removeItem("correoUsuario");
     sessionStorage.removeItem("rol");
-
     location.href="/";
 
   }

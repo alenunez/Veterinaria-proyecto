@@ -24,6 +24,10 @@ import { MenuVeterinarioComponent } from './components/veterinario/menu-veterina
 import { VeterinarioClientesComponent } from './components/veterinario/veterinario-clientes/veterinario-clientes.component';
 import { VeterinarioMascotasComponent } from './components/veterinario/veterinario-mascotas/veterinario-mascotas.component';
 import { VeterinarioCitasComponent } from './components/veterinario/veterinario-citas/veterinario-citas.component';
+import { AdminUsuariosComponent } from './components/admin/admin-usuarios/admin-usuarios.component';
+import { AdminCitasComponent } from './components/admin/admin-citas/admin-citas.component';
+import { AdminMascotasComponent } from './components/admin/admin-mascotas/admin-mascotas.component';
+import { MenuAdminComponent } from './components/admin/menu-admin/menu-admin.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { VeterinarioCitasComponent } from './components/veterinario/veterinario-
     VeterinarioClientesComponent,
     VeterinarioMascotasComponent,
     VeterinarioCitasComponent,
+    AdminUsuariosComponent,
+    AdminCitasComponent,
+    AdminMascotasComponent,
+    MenuAdminComponent,
   ],
   imports: [
     BrowserModule,
