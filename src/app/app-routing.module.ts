@@ -1,3 +1,6 @@
+import { VeterinarioCitasComponent } from './components/veterinario/veterinario-citas/veterinario-citas.component';
+import { VeterinarioMascotasComponent } from './components/veterinario/veterinario-mascotas/veterinario-mascotas.component';
+import { VeterinarioClientesComponent } from './components/veterinario/veterinario-clientes/veterinario-clientes.component';
 import { SolicitarCitaClienteComponent } from './components/cliente/solicitar-cita-cliente/solicitar-cita-cliente.component';
 import { CitasClienteComponent } from './components/cliente/citas-cliente/citas-cliente.component';
 import { MascotasComponent } from './components/cliente/mascotas/mascotas.component';
@@ -62,6 +65,19 @@ const routes: Routes = [
   {
     path: 'solicitarCitaCliente',
     component: SolicitarCitaClienteComponent  
+  }
+  ,
+  {
+    path: 'veterinarioClientes',
+    component: VeterinarioClientesComponent  
+  }  ,
+  {
+    path: 'veterinarioMascotas',
+    component: VeterinarioMascotasComponent
+  }  ,
+  {
+    path: 'veterinarioCitas',
+    component: VeterinarioCitasComponent  
   }
 
 ];

@@ -21,6 +21,9 @@ import { MenuClienteComponent } from './components/cliente/menu-cliente/menu-cli
 import { CitasClienteComponent } from './components/cliente/citas-cliente/citas-cliente.component';
 import { SolicitarCitaClienteComponent } from './components/cliente/solicitar-cita-cliente/solicitar-cita-cliente.component';
 import { MenuVeterinarioComponent } from './components/veterinario/menu-veterinario/menu-veterinario.component';
+import { VeterinarioClientesComponent } from './components/veterinario/veterinario-clientes/veterinario-clientes.component';
+import { VeterinarioMascotasComponent } from './components/veterinario/veterinario-mascotas/veterinario-mascotas.component';
+import { VeterinarioCitasComponent } from './components/veterinario/veterinario-citas/veterinario-citas.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { MenuVeterinarioComponent } from './components/veterinario/menu-veterina
     CitasClienteComponent,
     SolicitarCitaClienteComponent,
     MenuVeterinarioComponent,
+    VeterinarioClientesComponent,
+    VeterinarioMascotasComponent,
+    VeterinarioCitasComponent,
   ],
   imports: [
     BrowserModule,
