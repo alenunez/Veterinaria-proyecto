@@ -1,0 +1,58 @@
+<app-menu-admin></app-menu-admin>
+<div class="container">
+    <div class="row">
+
+        <form (ngSubmit)="crearMascota()" id="crear">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" [(ngModel)]="mascota.nombre" [ngModelOptions]="{standalone:true}"
+                        placeholder="Nombres" class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="date" [(ngModel)]="mascota.fechaNacimiento" [ngModelOptions]="{standalone:true}"
+                        class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit"
+                        value="Crear">
+                </div>
+            </div>
+            <br>
+            <input type="text" class="form-control" placeholder="Buscar usuario" [(ngModel)]="filterPost" name="filterPost"
+                id="">
+
+            <table class="table table-bordered">
+                <thead>
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of usuarios | filter:filterPost ">
+                        <td>{{user.idUsuario}}</td>
+                        <td>{{user.nombres}}</td>
+                        <td>{{user.apellidos}}</td>
+                        <td> <button type="button" class="btn btn-primary" (click)="guardarId(user)">Seleccionar dueño</button>
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <br>
+
+        </form>
+
+
+
+    </div>
+
+</div>

@@ -2,7 +2,31 @@
 <div class="container">
     <div class="row">
 
+        <button type="button" class="btn btn-primary" (click)="crearMascota()" >Nueva mascota</button>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Dueño</th>
+                <th></th>
+        
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pet of mascotas">
+                <td>{{pet.idMascota}}</td>
+                <td>{{pet.nombre}}</td>
+                <td>{{pet.usuario.nombres + " "+pet.usuario.apellidos}}</td>
 
+                <td> <button type="button" class="btn btn-primary" (click)="verMascota(pet)">Ver Mascota</button>
+
+        
+              </tr>
+        
+        
+            </tbody>
+          </table>
 
         
 

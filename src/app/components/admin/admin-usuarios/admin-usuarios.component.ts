@@ -29,7 +29,12 @@ export class AdminUsuariosComponent implements OnInit {
   verUsuario(parametro:any){
     this.usuario=parametro
     console.log(this.usuario.nombres)
+    this.api.disparador.emit({data:this.usuario})
+    location.href="/adminVerUsuario"
+    sessionStorage.setItem('userID',JSON.stringify( this.usuario.idUsuario))
     //this.api.setProductosWishList(this.producto.idproducto,this.producto);
   }
+
+
 
 }

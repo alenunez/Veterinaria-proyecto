@@ -1,3 +1,5 @@
+import { CrearMascotaComponent } from './components/admin/admin-mascotas/crear-mascota/crear-mascota.component';
+import { VerUsuarioComponent } from './components/admin/admin-usuarios/ver-usuario/ver-usuario.component';
 import { CrearUsuarioComponent } from './components/admin/admin-usuarios/crear-usuario/crear-usuario.component';
 import { AdminMascotasComponent } from './components/admin/admin-mascotas/admin-mascotas.component';
 import { AdminCitasComponent } from './components/admin/admin-citas/admin-citas.component';
@@ -101,6 +103,16 @@ const routes: Routes = [
   {
     path: 'adminCrearUsuario',
     component: CrearUsuarioComponent  
+  }
+  ,
+  {
+    path: 'adminVerUsuario',
+    component: VerUsuarioComponent  
+  }
+  ,
+  {
+    path: 'adminCrearMascota',
+    component: CrearMascotaComponent 
   }
 ];
 

@@ -29,6 +29,9 @@ import { AdminCitasComponent } from './components/admin/admin-citas/admin-citas.
 import { AdminMascotasComponent } from './components/admin/admin-mascotas/admin-mascotas.component';
 import { MenuAdminComponent } from './components/admin/menu-admin/menu-admin.component';
 import { CrearUsuarioComponent } from './components/admin/admin-usuarios/crear-usuario/crear-usuario.component';
+import { VerUsuarioComponent } from './components/admin/admin-usuarios/ver-usuario/ver-usuario.component';
+import { CrearMascotaComponent } from './components/admin/admin-mascotas/crear-mascota/crear-mascota.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -57,6 +60,9 @@ import { CrearUsuarioComponent } from './components/admin/admin-usuarios/crear-u
     AdminMascotasComponent,
     MenuAdminComponent,
     CrearUsuarioComponent,
+    VerUsuarioComponent,
+    CrearMascotaComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,6 @@ export class CrearUsuarioComponent implements OnInit {
         data => this.confirmar(data)
       )
     }
-
   }
   confirmar(resultado:any){
     if(resultado){
