@@ -28,6 +28,7 @@ import { AdminUsuariosComponent } from './components/admin/admin-usuarios/admin-
 import { AdminCitasComponent } from './components/admin/admin-citas/admin-citas.component';
 import { AdminMascotasComponent } from './components/admin/admin-mascotas/admin-mascotas.component';
 import { MenuAdminComponent } from './components/admin/menu-admin/menu-admin.component';
+import { CrearUsuarioComponent } from './components/admin/admin-usuarios/crear-usuario/crear-usuario.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MenuAdminComponent } from './components/admin/menu-admin/menu-admin.com
     AdminCitasComponent,
     AdminMascotasComponent,
     MenuAdminComponent,
+    CrearUsuarioComponent,
   ],
   imports: [
     BrowserModule,

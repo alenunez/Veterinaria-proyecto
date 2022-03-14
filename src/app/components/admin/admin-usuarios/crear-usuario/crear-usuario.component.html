@@ -1,0 +1,76 @@
+<app-menu-admin></app-menu-admin>
+<div class="container">
+    <div class="row">
+
+        <form (ngSubmit)="crearUsuario()" id="crear">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" [(ngModel)]="usuario.nombres" [ngModelOptions]="{standalone:true}"
+                        placeholder="Nombres" class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" [(ngModel)]="usuario.apellidos" [ngModelOptions]="{standalone:true}"
+                        placeholder="Apellidos" class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="email" [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone:true}"
+                        placeholder="correo" class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="password" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone:true}"
+                        placeholder="password" class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="number" [(ngModel)]="usuario.identificacion" [ngModelOptions]="{standalone:true}"
+                        placeholder="Numero de documento" class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone:true}"
+                        placeholder="Telefono" class="form-control" required>
+                </div>
+            </div>
+            <br>            
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" [(ngModel)]="usuario.direccion" [ngModelOptions]="{standalone:true}"
+                        placeholder="Direccion" class="form-control" required>
+                </div>
+            </div>
+            <br>           
+            <div class="row">
+                <select  [(ngModel)]="usuario.rol" [ngModelOptions]="{standalone:true}" >
+                    <option value="administrador">Administrador</option>
+                    <option value="veterinario">Veterinario</option>
+                    <option value="cliente">Cliente</option>
+                  </select>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit" value="Crear">
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+
+</div>

@@ -1,3 +1,4 @@
+import { CrearUsuarioComponent } from './components/admin/admin-usuarios/crear-usuario/crear-usuario.component';
 import { AdminMascotasComponent } from './components/admin/admin-mascotas/admin-mascotas.component';
 import { AdminCitasComponent } from './components/admin/admin-citas/admin-citas.component';
 import { VeterinarioCitasComponent } from './components/veterinario/veterinario-citas/veterinario-citas.component';
@@ -95,6 +96,11 @@ const routes: Routes = [
   {
     path: 'adminMascotas',
     component: AdminMascotasComponent  
+  }
+  ,
+  {
+    path: 'adminCrearUsuario',
+    component: CrearUsuarioComponent  
   }
 ];
 
