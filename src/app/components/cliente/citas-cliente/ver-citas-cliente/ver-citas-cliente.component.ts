@@ -1,14 +1,15 @@
-import { CitaMedica } from './../../../../modelos/citaMedica';
 import { Component, OnInit } from '@angular/core';
+import { CitaMedica } from 'src/app/modelos/citaMedica';
 import { Mascota } from 'src/app/modelos/mascota';
 import { AdminServiceService } from 'src/app/services/admin-service.service';
 
 @Component({
-  selector: 'app-ver-citas',
-  templateUrl: './ver-citas.component.html',
-  styleUrls: ['./ver-citas.component.css']
+  selector: 'app-ver-citas-cliente',
+  templateUrl: './ver-citas-cliente.component.html',
+  styleUrls: ['./ver-citas-cliente.component.css']
 })
-export class VerCitasComponent implements OnInit {
+export class VerCitasClienteComponent implements OnInit {
+
   mascota:Mascota = new Mascota();
   pet:any={}
   citaMedica:CitaMedica= new CitaMedica();
@@ -31,21 +32,6 @@ export class VerCitasComponent implements OnInit {
     this.api.eliminarCita().subscribe();
     alert("cita eliminada exitosamente.");
     location.href="/adminCitas"
-  }
-
-  actualizarCita(){
-    let formulario:any = document.getElementById("actualizar");
-    let formularioValido:boolean = formulario.reportValidity();
-    if( formularioValido){
-      this.api.updateCita(this.citaMedica).subscribe(
-        data => this.confirmar(data)
-      )
-    }
-  }
-  confirmar(resultado:any){
-    
-      alert("Cita actualizada exitosamente.");
- 
   }
 
 }

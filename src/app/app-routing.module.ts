@@ -1,3 +1,7 @@
+import { VerCitasClienteComponent } from './components/cliente/citas-cliente/ver-citas-cliente/ver-citas-cliente.component';
+import { VerMascotaClienteComponent } from './components/cliente/mascotas/ver-mascota-cliente/ver-mascota-cliente.component';
+import { VerCitasVetComponent } from './components/veterinario/veterinario-citas/ver-citas-vet/ver-citas-vet.component';
+import { VerClientesComponent } from './components/veterinario/veterinario-clientes/ver-clientes/ver-clientes.component';
 import { VerCitasComponent } from './components/admin/admin-citas/ver-citas/ver-citas.component';
 import { VerMascotaComponent } from './components/admin/admin-mascotas/ver-mascota/ver-mascota.component';
 import { CrearMascotaComponent } from './components/admin/admin-mascotas/crear-mascota/crear-mascota.component';
@@ -24,6 +28,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { GaleryComponent } from './components/galery/galery.component';
 import { AdminUsuariosComponent } from './components/admin/admin-usuarios/admin-usuarios.component';
 import { CrearCitaComponent } from './components/admin/admin-citas/crear-cita/crear-cita.component';
+import { VerMascotasVetComponent } from './components/veterinario/veterinario-mascotas/ver-mascotas-vet/ver-mascotas-vet.component';
 
 const routes: Routes = [
   {
@@ -131,6 +136,31 @@ const routes: Routes = [
   {
     path: 'adminVerCita',
     component: VerCitasComponent
+  }
+  ,
+  {
+    path: 'veterinarioVerCliente',
+    component: VerClientesComponent
+  }
+  ,
+  {
+    path: 'veterinarioVerMascota',
+    component: VerMascotasVetComponent
+  }
+  ,
+  {
+    path: 'veterinarioVerCitas',
+    component: VerCitasVetComponent
+  }
+  ,
+  {
+    path: 'clienteVerMascota',
+    component: VerMascotaClienteComponent
+  }
+  ,
+  {
+    path: 'clienteVerCita',
+    component: VerCitasClienteComponent
   }
 ];
 

@@ -31,4 +31,19 @@ export class VerMascotaComponent implements OnInit {
     location.href="/adminMascotas"
   }
 
+  actualizarMascota(){
+    let formulario:any = document.getElementById("actualizar");
+    let formularioValido:boolean = formulario.reportValidity();
+    if( formularioValido){
+      this.api.updateMascota(this.mascota).subscribe(
+        data => this.confirmar(data)
+      )
+    }
+  }
+  confirmar(resultado:any){
+    
+      alert("Mascota actualizada exitosamente.");
+ 
+  }
+
 }

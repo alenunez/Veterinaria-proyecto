@@ -23,17 +23,9 @@ export class LoginComponent implements OnInit{
   constructor(private api: LoginService,) { }
 
   ngOnInit(): void {
-    //  this.checkLocalStorage();
   }
 
-  /** checkLocalStorage(){
-     if(localStorage.getItem('token')){
-       location.href="/home"
-     }
-     else if(localStorage.getItem('tokenAdmin')){
-       location.href="/homeAdmin"
-     }
-   }*/
+
 
 
   onLogin() {

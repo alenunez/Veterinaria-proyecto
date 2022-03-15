@@ -35,6 +35,8 @@ export class MenuAdminComponent implements OnInit {
     sessionStorage.removeItem("rol");
     sessionStorage.removeItem("CitaID");
     sessionStorage.removeItem("MascotaID");
+    sessionStorage.removeItem("userID");
+
 
 
     location.href="/";

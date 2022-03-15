@@ -1,14 +1,13 @@
-import { Mascota } from './../../../../modelos/mascota';
-import { Usuario } from './../../../../modelos/usuario';
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/modelos/usuario';
 import { AdminServiceService } from 'src/app/services/admin-service.service';
 
 @Component({
-  selector: 'app-ver-usuario',
-  templateUrl: './ver-usuario.component.html',
-  styleUrls: ['./ver-usuario.component.css']
+  selector: 'app-ver-clientes',
+  templateUrl: './ver-clientes.component.html',
+  styleUrls: ['./ver-clientes.component.css']
 })
-export class VerUsuarioComponent implements OnInit {
+export class VerClientesComponent implements OnInit {
   usuario:Usuario = new Usuario();
   mascotas:any=[]
   user:any={}
@@ -39,21 +38,6 @@ export class VerUsuarioComponent implements OnInit {
     console.log("Usuario eliminado")
     alert("Usuario eliminado exitosamente.");
     location.href="/adminUsuarios"
-  }
-
-  actualizarUsuario(){
-    let formulario:any = document.getElementById("actualizar");
-    let formularioValido:boolean = formulario.reportValidity();
-    if( formularioValido){
-      this.api.updateUsuario(this.usuario).subscribe(
-        data => this.confirmar(data)
-      )
-    }
-  }
-  confirmar(resultado:any){
-    
-      alert("Usuario actualizado exitosamente.");
- 
   }
 
 }

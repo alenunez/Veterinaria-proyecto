@@ -36,6 +36,11 @@ import { VerMascotaComponent } from './components/admin/admin-mascotas/ver-masco
 import { CrearCitaComponent } from './components/admin/admin-citas/crear-cita/crear-cita.component';
 import { FilterMascotaPipe } from './pipes/filter-mascota.pipe';
 import { VerCitasComponent } from './components/admin/admin-citas/ver-citas/ver-citas.component';
+import { VerClientesComponent } from './components/veterinario/veterinario-clientes/ver-clientes/ver-clientes.component';
+import { VerMascotasVetComponent } from './components/veterinario/veterinario-mascotas/ver-mascotas-vet/ver-mascotas-vet.component';
+import { VerCitasVetComponent } from './components/veterinario/veterinario-citas/ver-citas-vet/ver-citas-vet.component';
+import { VerMascotaClienteComponent } from './components/cliente/mascotas/ver-mascota-cliente/ver-mascota-cliente.component';
+import { VerCitasClienteComponent } from './components/cliente/citas-cliente/ver-citas-cliente/ver-citas-cliente.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +76,11 @@ import { VerCitasComponent } from './components/admin/admin-citas/ver-citas/ver-
     CrearCitaComponent,
     FilterMascotaPipe,
     VerCitasComponent,
+    VerClientesComponent,
+    VerMascotasVetComponent,
+    VerCitasVetComponent,
+    VerMascotaClienteComponent,
+    VerCitasClienteComponent,
   ],
   imports: [
     BrowserModule,

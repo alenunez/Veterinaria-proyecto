@@ -2,37 +2,43 @@
 <div class="container">
     <div class="row">
 <h2 style="text-align: center;">Informacion personal</h2>
-<form action="">
+<form   (ngSubmit)="actualizarUsuario()" id="actualizar" >
     <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.idUsuario}}">
+    <input type="number" name="idUsuario" id="idUsuario" value="{{usuario.idUsuario}}" [(ngModel)]="usuario.idUsuario" [ngModelOptions]="{standalone: true}" readonly class="form-control" >
 
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.nombres}}">
+    <label for="">Nombres</label>
+    <input type="text" name="nombres" id="nombres" value="{{usuario.nombres}}"[(ngModel)]="usuario.nombres" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.apellidos}}">
+    <label for="">Apellidos</label>
+    <input type="text" name="apellidos" id="apellidos" value="{{usuario.apellidos}}" [(ngModel)]="usuario.apellidos" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.correo}}">
+    <label for="">Correo</label>
+    <input type="text" name="correo" id="correo" value="{{usuario.correo}}"[(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" class="form-control">
+    <br>
+    <label for="">Password</label>
+    <input type="text" name="password" id="password" value="{{usuario.password}}"[(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.password}}">
+    <label for="">Identificacion</label>
+    <input type="text" name="identificacion" id="identificacion" value="{{usuario.identificacion}}"[(ngModel)]="usuario.identificacion" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.identificacion}}">
+    <label for="">Telefono</label>
+    <input type="text" name="telefono" id="telefono" value="{{usuario.telefono}}"[(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.telefono}}">
+    <label for="">direccion</label>
+    <input type="text" name="direccion" id="direccion" value="{{usuario.direccion}}" [(ngModel)]="usuario.direccion" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.direccion}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.fechaNacimiento}}">
+    <label for="">Fecha de nacimiento</label>
+    <input type="text" name="fechaNacimiento" id="fechaNacimiento" value="{{usuario.fechaNacimiento}}" [(ngModel)]="usuario.fechaNacimiento" [ngModelOptions]="{standalone: true}" class="form-control">
 
     
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.rol}}">
+    <label for="">Rol</label>
+    <input type="text" name="rol" id="rol" value="{{usuario.rol}}" [(ngModel)]="usuario.rol" class="form-control">
+
+    <div class="row">
+        <div class="col-md-12">
+            <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit" value="Actualizar">
+        </div>
+    </div>
 </form>
 
         

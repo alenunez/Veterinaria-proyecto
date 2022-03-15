@@ -29,10 +29,15 @@ export class MenuVeterinarioComponent implements OnInit {
 
   logout(){
     localStorage.removeItem("usuario");
+    localStorage.removeItem("idUsuarioSesion")
     sessionStorage.removeItem("correoUsuario");
     sessionStorage.removeItem("rol");
-
+    sessionStorage.removeItem("CitaID");
+    sessionStorage.removeItem("MascotaID");
+    sessionStorage.removeItem("userID");
     location.href="/";
+
+
 
   }
 

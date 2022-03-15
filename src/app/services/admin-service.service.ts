@@ -9,6 +9,7 @@ export class AdminServiceService {
   @Output() disparador: EventEmitter<any> = new EventEmitter();
 
   constructor(private http: HttpClient) { }
+
   createUsuario(usuario: any) {
     var httpOptions = {
       headers: new HttpHeaders({
@@ -18,12 +19,22 @@ export class AdminServiceService {
     return this.http.post<any>("http://localhost:8080/usuario/guardar", usuario, httpOptions);
   }
 
+  updateUsuario(usuario: any) {
+    var httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }
+    return this.http.put<any>("http://localhost:8080/usuario/actualizar/", usuario, httpOptions);
+  }
+
   getUsuarios() {
     return this.http.get(`http://localhost:8080/usuario/buscar`)
   }
   getUsuario() {
     return this.http.get(`http://localhost:8080/usuario/buscar/` + sessionStorage.getItem("userID"))
   }
+  
   getUsuarioLogueado() {
     return this.http.get(`http://localhost:8080/usuario/buscar/` + localStorage.getItem("idUsuarioSesion"))
   }
@@ -34,6 +45,16 @@ export class AdminServiceService {
   eliminarUsuario(): Observable<{}> {
     return this.http.delete<{}>(`http://localhost:8080/usuario/eliminar/` + sessionStorage.getItem("userID"))
   }
+
+  updateMascota(mascota:any) {
+    var httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }
+    return this.http.put<any>("http://localhost:8080/mascota/actualizar/", mascota, httpOptions);
+  }
+
   getMascotas(){
     return this.http.get(`http://localhost:8080/mascota/buscar`)
   }
@@ -72,6 +93,15 @@ export class AdminServiceService {
 
   eliminarCita(): Observable<{}> {
     return this.http.delete<{}>(`http://localhost:8080/citaMedica/eliminar/` + sessionStorage.getItem("CitaID"))
+  }
+
+  updateCita(cita:any) {
+    var httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }
+    return this.http.put<any>("http://localhost:8080/citaMedica/actualizar/", cita, httpOptions);
   }
 
 

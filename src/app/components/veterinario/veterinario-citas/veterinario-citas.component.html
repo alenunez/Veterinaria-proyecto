@@ -1,1 +1,38 @@
 <app-menu-veterinario></app-menu-veterinario>
+<div class="container">
+    <div class="row">
+
+        <button type="button" class="btn btn-primary" (click)="crearCita()" >Nueva cita</button>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Mascota</th>
+                <th scope="col">Veterinario</th>
+                <th scope="col">Fecha</th>
+                <th></th>
+        
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cita of citas">
+                <td *ngIf="cita.usuario.idUsuario == idUsuarioSesion">{{cita.idCita}}</td>
+                <td *ngIf="cita.usuario.idUsuario == idUsuarioSesion">{{cita.mascota.nombre}}</td>
+                <td *ngIf="cita.usuario.idUsuario == idUsuarioSesion">{{cita.mascota.usuario.nombres+" "+cita.mascota.usuario.apellidos}}</td>
+                <td *ngIf="cita.usuario.idUsuario == idUsuarioSesion">{{cita.usuario.nombres+" "+cita.usuario.apellidos}}</td>
+                <td *ngIf="cita.usuario.idUsuario == idUsuarioSesion">{{cita.fecha}}</td>
+                <td *ngIf="cita.usuario.idUsuario == idUsuarioSesion"> <button type="button" class="btn btn-primary" (click)="verCita(cita)">Ver cita</button>
+
+        
+              </tr>
+        
+        
+            </tbody>
+          </table>
+
+        
+
+    </div>
+
+</div>

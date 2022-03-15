@@ -1,24 +1,31 @@
 <app-menu-cliente></app-menu-cliente>
 <div class="container">
     <div class="row">
+
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Dueño</th>
+                <th></th>
         
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pet of mascotas">
+                <td *ngIf="pet.usuario.idUsuario == idUsuarioSesion">{{pet.idMascota}}</td>
+                <td *ngIf="pet.usuario.idUsuario == idUsuarioSesion">{{pet.nombre}}</td>
+                <td *ngIf="pet.usuario.idUsuario == idUsuarioSesion">{{pet.usuario.nombres + " "+pet.usuario.apellidos}}</td>
 
-        <div class="col-9">
-            <table class="table table-dark">
-                <thead>
-                  <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Animal</th>
-                    <th scope="col">Raza</th>
-                    <th scope="col">Edad</th>
-                    <th scope="col">Fotografia</th>
+                <td *ngIf="pet.usuario.idUsuario == idUsuarioSesion"> <button type="button" class="btn btn-primary" (click)="verMascota(pet)">Ver Mascota</button>
 
-            
-                  </tr>
-                </thead>
-                
-              </table>
-        </div>
+        
+              </tr>
+        
+        
+            </tbody>
+          </table>
 
         
 

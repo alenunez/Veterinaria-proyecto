@@ -22,26 +22,40 @@
                 <td>{{mascota.usuario.nombres +" "+mascota.usuario.apellidos}}</td>
             </tbody>
           </table>
-          <form action="">
+
+
+          <form (ngSubmit)="actualizarMascota()" id="actualizar">
               <label for="id">ID</label>
-          <input type="number" name="id" id="id" value="{{mascota.idMascota}}">
+          <input type="number" name="id" id="id" value="{{mascota.idMascota}}" [(ngModel)]="mascota.idMascota"
+          [ngModelOptions]="{standalone: true}" readonly>
 
           <label for="nombres">Nombre</label>
-          <input type="text" name="nombres" id="nombres" value="{{mascota.nombre}}">
+          <input type="text" name="nombres" id="nombres" value="{{mascota.nombre}}" [(ngModel)]="mascota.nombre"
+          [ngModelOptions]="{standalone: true}">
 
           <label for="apellidos">Fecha de nacimiento</label>
-          <input type="text" value="{{mascota.fechaNacimiento}}">
+          <input type="text" value="{{mascota.fechaNacimiento}}"[(ngModel)]="mascota.fechaNacimiento"
+          [ngModelOptions]="{standalone: true}">
 
           <label for="correo">ID dueño</label>
-          <input type="text" value="{{mascota.usuario.idUsuario}}">
+          <input type="text" value="{{mascota.usuario.idUsuario}}"[(ngModel)]="mascota.usuario.idUsuario"
+          [ngModelOptions]="{standalone: true}" readonly >
 
           <br>
           <label for="correo">Dueño</label>
-          <input type="text" value="{{mascota.usuario.nombres+' '+mascota.usuario.apellidos}}">
+          <input type="text" value="{{mascota.usuario.nombres+' '+mascota.usuario.apellidos}}" [(ngModel)]="mascota.usuario.nombres"
+          [ngModelOptions]="{standalone: true}" readonly>
 
-
+          <div class="row">
+            <div class="col-6">
+              <button type="button" class="btn btn-primary" (click)="eliminar()">Eliminar usuario</button>
+            </div>
+            <div class="col-6">
+              <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit" value="Actualizar">
+    
+            </div>
+          </div>
         </form>
-        <button type="button" class="btn btn-primary" (click)="eliminar()" >Eliminar mascota</button>
 
 
 

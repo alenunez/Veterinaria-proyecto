@@ -1,0 +1,73 @@
+<app-menu-veterinario></app-menu-veterinario>
+<div class="container">
+    <div class="row">
+
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Rol</th>
+        
+              </tr>
+            </thead>
+            <tbody style="background-color: black;">
+         
+                <td>{{usuario.idUsuario}}</td>
+                <td>{{usuario.nombres}}</td>
+                <td>{{usuario.apellidos}}</td>
+                <td>{{usuario.correo}}</td>
+                <td>{{usuario.rol}}</td>           
+            </tbody>
+          </table>
+          <form action="">
+              <label for="id">ID</label>
+          <input type="number" name="id" id="id" value="{{usuario.idUsuario}}">
+
+          <label for="nombres">Nombres</label>
+          <input type="text" name="nombres" id="nombres" value="{{usuario.nombres}}">
+
+          <label for="apellidos">Apellidos</label>
+          <input type="text" value="{{usuario.apellidos}}">
+
+          <label for="correo">Correo</label>
+          <input type="text" value="{{usuario.correo}}">
+
+          <br>
+          <label for="correo">Identificacion</label>
+          <input type="text" value="{{usuario.identificacion}}">
+
+          <label for="correo">Telefono</label>
+          <input type="text" value="{{usuario.telefono}}">
+
+          <label for="correo">Direccion</label>
+          <input type="text" value="{{usuario.direccion}}">
+
+          <label for="correo">Rol</label>
+          <input type="text" value="{{usuario.rol}}">
+        </form>
+        <table class="table table-bordered">
+          <thead>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Fecha de nacimiento</th>
+              <th></th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let user of mascotas">
+                  <td>{{user.idMascota}}</td>
+                  <td>{{user.nombre}}</td>
+                  <td>{{user.fechaNacimiento}}</td>
+
+              </tr>
+          </tbody>
+
+      </table>
+
+
+
+    </div>
+
+</div>
