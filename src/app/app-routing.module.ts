@@ -1,3 +1,4 @@
+import { VerCitasComponent } from './components/admin/admin-citas/ver-citas/ver-citas.component';
 import { VerMascotaComponent } from './components/admin/admin-mascotas/ver-mascota/ver-mascota.component';
 import { CrearMascotaComponent } from './components/admin/admin-mascotas/crear-mascota/crear-mascota.component';
 import { VerUsuarioComponent } from './components/admin/admin-usuarios/ver-usuario/ver-usuario.component';
@@ -125,6 +126,11 @@ const routes: Routes = [
   {
     path: 'adminCrearCita',
     component: CrearCitaComponent
+  }
+  ,
+  {
+    path: 'adminVerCita',
+    component: VerCitasComponent
   }
 ];
 

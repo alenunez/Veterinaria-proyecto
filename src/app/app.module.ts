@@ -35,6 +35,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { VerMascotaComponent } from './components/admin/admin-mascotas/ver-mascota/ver-mascota.component';
 import { CrearCitaComponent } from './components/admin/admin-citas/crear-cita/crear-cita.component';
 import { FilterMascotaPipe } from './pipes/filter-mascota.pipe';
+import { VerCitasComponent } from './components/admin/admin-citas/ver-citas/ver-citas.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { FilterMascotaPipe } from './pipes/filter-mascota.pipe';
     VerMascotaComponent,
     CrearCitaComponent,
     FilterMascotaPipe,
+    VerCitasComponent,
   ],
   imports: [
     BrowserModule,

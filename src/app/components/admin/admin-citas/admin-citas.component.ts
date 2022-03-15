@@ -24,6 +24,12 @@ export class AdminCitasComponent implements OnInit {
   crearCita() { 
     location.href="/adminCrearCita"
   }
-  verUsuario() { }
+  verCita(parametro:any) { 
+    this.cita=parametro
+    console.log(this.cita.usuario.nombres)
+    location.href="/adminVerCita"
+    sessionStorage.setItem('CitaID',JSON.stringify( this.cita.idCita))
+    //this.api.setProductosWishList(this.producto.idproducto,this.producto);
+  }
 
 }

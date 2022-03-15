@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit{
         this.usuario = data;
         console.log(this.usuario)
         localStorage.setItem("usuario", JSON.stringify(this.usuario)); 
+        localStorage.setItem("idUsuarioSesion",JSON.stringify(this.usuario.idUsuario));
         sessionStorage.setItem("correoUsuario",this.usuario.correo)
         sessionStorage.setItem("rol",this.usuario.rol);
         if(this.usuario.rol=="administrador"){

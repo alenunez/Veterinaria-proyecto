@@ -3,7 +3,7 @@ import { Mascota } from './mascota';
 import { Usuario } from "./usuario";
 
 export class CitaMedica{
-    idCitaMedica: number;
+    idCita: number;
     diagnostico: string;
     tratamiento:string;
     usuario:Usuario;
@@ -13,7 +13,7 @@ export class CitaMedica{
 
 
     constructor(){
-        this.idCitaMedica = 0;
+        this.idCita = 0;
         this.diagnostico ="";
         this.tratamiento ="";
         this.usuario=new Usuario();

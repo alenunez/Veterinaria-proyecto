@@ -24,6 +24,9 @@ export class AdminServiceService {
   getUsuario() {
     return this.http.get(`http://localhost:8080/usuario/buscar/` + sessionStorage.getItem("userID"))
   }
+  getUsuarioLogueado() {
+    return this.http.get(`http://localhost:8080/usuario/buscar/` + localStorage.getItem("idUsuarioSesion"))
+  }
   getUsuarioMascota() {
     return this.http.get(`http://localhost:8080/usuario/buscar/mascotas/` + sessionStorage.getItem("userID"))
   }
@@ -61,6 +64,14 @@ export class AdminServiceService {
       })
     }
     return this.http.post<any>("http://localhost:8080/citaMedica/guardar/"+idUsuario+"/"+idMascota, cita, httpOptions);
+  }
+  getCita() {
+
+    return this.http.get(`http://localhost:8080/citaMedica/buscar/` + sessionStorage.getItem("CitaID"))
+  }
+
+  eliminarCita(): Observable<{}> {
+    return this.http.delete<{}>(`http://localhost:8080/citaMedica/eliminar/` + sessionStorage.getItem("CitaID"))
   }
 
 
