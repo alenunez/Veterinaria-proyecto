@@ -1,3 +1,4 @@
+import { Mascota } from './../../../modelos/mascota';
 import { Component, OnInit } from '@angular/core';
 import { AdminServiceService } from 'src/app/services/admin-service.service';
 
@@ -8,6 +9,7 @@ import { AdminServiceService } from 'src/app/services/admin-service.service';
 })
 export class AdminMascotasComponent implements OnInit {
   mascotas:any=[];
+  mascota:Mascota = new Mascota();
 
 
   constructor(private api:AdminServiceService) { }
@@ -24,6 +26,11 @@ export class AdminMascotasComponent implements OnInit {
   crearMascota(){
     location.href="/adminCrearMascota"
   }
-  verMascota(parametro:any){}
-
+  verMascota(parametro:any){
+    this.mascota=parametro
+    console.log(this.mascota.nombre)
+    location.href="/adminVerMascota"
+    sessionStorage.setItem('MascotaID',JSON.stringify( this.mascota.idMascota))
+    //this.api.setProductosWishList(this.producto.idproducto,this.producto);
+  }
 }

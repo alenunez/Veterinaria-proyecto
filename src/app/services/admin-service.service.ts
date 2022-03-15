@@ -22,7 +22,6 @@ export class AdminServiceService {
     return this.http.get(`http://localhost:8080/usuario/buscar`)
   }
   getUsuario() {
-    console.log(`http://localhost:8080/usuario/buscar/` + sessionStorage.getItem("userID"));
 
     return this.http.get(`http://localhost:8080/usuario/buscar/` + sessionStorage.getItem("userID"))
   }
@@ -42,13 +41,14 @@ export class AdminServiceService {
     console.log("http://localhost:8080/mascota/guardar/"+id)
     return this.http.post<any>("http://localhost:8080/mascota/guardar/"+id, mascota, httpOptions);
   }
+  getMascota() {
 
-createMascotaa(mascota: any) {
-  var httpOptions = {
-    headers: new HttpHeaders({
-      'Content-type': 'application/json'
-    })
+    return this.http.get(`http://localhost:8080/mascota/buscar/` + sessionStorage.getItem("MascotaID"))
   }
-  return this.http.post<any>("http://localhost:8080/mascota/guardara/", mascota, httpOptions);
-}
+
+  eliminarMascota(): Observable<{}> {
+    return this.http.delete<{}>(`http://localhost:8080/mascota/eliminar/` + sessionStorage.getItem("MascotaID"))
+  }
+
+
 }

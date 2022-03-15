@@ -1,3 +1,4 @@
+import { VerMascotaComponent } from './components/admin/admin-mascotas/ver-mascota/ver-mascota.component';
 import { CrearMascotaComponent } from './components/admin/admin-mascotas/crear-mascota/crear-mascota.component';
 import { VerUsuarioComponent } from './components/admin/admin-usuarios/ver-usuario/ver-usuario.component';
 import { CrearUsuarioComponent } from './components/admin/admin-usuarios/crear-usuario/crear-usuario.component';
@@ -113,6 +114,11 @@ const routes: Routes = [
   {
     path: 'adminCrearMascota',
     component: CrearMascotaComponent 
+  }
+  ,
+  {
+    path: 'adminVerMascota',
+    component: VerMascotaComponent
   }
 ];
 
