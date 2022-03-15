@@ -22,8 +22,10 @@ export class AdminServiceService {
     return this.http.get(`http://localhost:8080/usuario/buscar`)
   }
   getUsuario() {
-
     return this.http.get(`http://localhost:8080/usuario/buscar/` + sessionStorage.getItem("userID"))
+  }
+  getUsuarioMascota() {
+    return this.http.get(`http://localhost:8080/usuario/buscar/mascotas/` + sessionStorage.getItem("userID"))
   }
 
   eliminarUsuario(): Observable<{}> {
@@ -38,7 +40,6 @@ export class AdminServiceService {
         'Content-type': 'application/json'
       })
     }
-    console.log("http://localhost:8080/mascota/guardar/"+id)
     return this.http.post<any>("http://localhost:8080/mascota/guardar/"+id, mascota, httpOptions);
   }
   getMascota() {
@@ -48,6 +49,18 @@ export class AdminServiceService {
 
   eliminarMascota(): Observable<{}> {
     return this.http.delete<{}>(`http://localhost:8080/mascota/eliminar/` + sessionStorage.getItem("MascotaID"))
+  }
+
+  getCitas(){
+    return this.http.get(`http://localhost:8080/citaMedica/buscar`)
+  }
+  createCita(cita: any,idUsuario:any,idMascota:any) {
+    var httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }
+    return this.http.post<any>("http://localhost:8080/citaMedica/guardar/"+idUsuario+"/"+idMascota, cita, httpOptions);
   }
 
 

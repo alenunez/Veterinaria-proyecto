@@ -22,6 +22,7 @@ import { DoctorsComponent } from './components/doctors/doctors.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GaleryComponent } from './components/galery/galery.component';
 import { AdminUsuariosComponent } from './components/admin/admin-usuarios/admin-usuarios.component';
+import { CrearCitaComponent } from './components/admin/admin-citas/crear-cita/crear-cita.component';
 
 const routes: Routes = [
   {
@@ -119,6 +120,11 @@ const routes: Routes = [
   {
     path: 'adminVerMascota',
     component: VerMascotaComponent
+  }
+  ,
+  {
+    path: 'adminCrearCita',
+    component: CrearCitaComponent
   }
 ];
 

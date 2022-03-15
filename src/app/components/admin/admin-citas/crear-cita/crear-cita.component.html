@@ -1,0 +1,81 @@
+<app-menu-admin></app-menu-admin>
+<div class="container">
+    <div class="row">
+
+        <form (ngSubmit)="crearCita()" id="crear">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="date" [(ngModel)]="cita.fecha" [ngModelOptions]="{standalone:true}" placeholder="Fecha"
+                        class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit"
+                        value="Crear">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Buscar veterinario" [(ngModel)]="filterPost"
+                    name="filterPost" id="">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <th>ID</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of usuarios | filter:filterPost ">
+                            <div *ngIf="user.rol=='veterinario'">
+                                <td>{{user.idUsuario}}</td>
+                                <td>{{user.nombres}}</td>
+                                <td>{{user.apellidos}}</td>
+                                <td> <button type="button" class="btn btn-primary"
+                                        (click)="guardarIdVeterinario(user)">Seleccionar Veterinario</button>
+                            </div>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-6" > <input type="text" class="form-control" placeholder="Buscar Mascota"
+                    [(ngModel)]="filterMascota" name="filterMascota" id="">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Dueño</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let pet of mascotas | filterMascota:filterMascota ">
+                            <td>{{pet.idMascota}}</td>
+                            <td>{{pet.nombre}}</td>
+                            <td>{{pet.usuario.nombres+" "+pet.usuario.apellidos}}</td>
+                            <td> <button type="button" class="btn btn-primary"
+                                    (click)="guardarIdMascota(pet)">Seleccionar
+                                    Mascota</button>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+            <br>
+            <br>
+
+        </form>
+
+
+
+    </div>
+
+</div>

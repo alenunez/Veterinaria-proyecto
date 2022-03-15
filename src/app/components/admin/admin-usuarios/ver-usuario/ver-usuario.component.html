@@ -49,6 +49,23 @@
           <input type="text" value="{{usuario.rol}}">
         </form>
         <button type="button" class="btn btn-primary" (click)="eliminar()" >Eliminar usuario</button>
+        <table class="table table-bordered">
+          <thead>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Fecha de nacimiento</th>
+              <th></th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let user of mascotas">
+                  <td>{{user.idMascota}}</td>
+                  <td>{{user.nombre}}</td>
+                  <td>{{user.fechaNacimiento}}</td>
+
+              </tr>
+          </tbody>
+
+      </table>
 
 
 

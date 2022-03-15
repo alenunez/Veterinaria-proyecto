@@ -25,10 +25,7 @@ export class CrearMascotaComponent implements OnInit {
       this.usuarios=data;
     }) 
   }
-  seguro(){
 
-  
-  }
   
   crearMascota(){   
     if(this.id==0){

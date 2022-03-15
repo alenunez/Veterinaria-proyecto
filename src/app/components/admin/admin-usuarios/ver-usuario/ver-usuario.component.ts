@@ -1,3 +1,4 @@
+import { Mascota } from './../../../../modelos/mascota';
 import { Usuario } from './../../../../modelos/usuario';
 import { Component, OnInit } from '@angular/core';
 import { AdminServiceService } from 'src/app/services/admin-service.service';
@@ -9,7 +10,9 @@ import { AdminServiceService } from 'src/app/services/admin-service.service';
 })
 export class VerUsuarioComponent implements OnInit {
   usuario:Usuario = new Usuario();
+  mascotas:any=[]
   user:any={}
+  pet:any={}
 
   constructor(private api:AdminServiceService) { }
 
@@ -22,6 +25,13 @@ export class VerUsuarioComponent implements OnInit {
       this.user=data;
       this.usuario=this.user;
       console.log(this.usuario);
+      this.verMascotasUsuario();
+    })
+  }
+
+  verMascotasUsuario(){
+    this.api.getUsuarioMascota().subscribe(data=>{
+      this.mascotas=data;
     })
   }
   eliminar():void{

@@ -27,7 +27,7 @@ export class VerMascotaComponent implements OnInit {
   eliminar():void{
     this.api.eliminarMascota().subscribe();
     console.log("Mascota eliminado")
-    alert("mascota eliminads exitosamente.");
+    alert("mascota eliminada exitosamente.");
     location.href="/adminMascotas"
   }
 
