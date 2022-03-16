@@ -1,42 +1,53 @@
-<app-menu-cliente></app-menu-cliente>
-<div class="container">
-    <div class="row">
-<h2 style="text-align: center;">Informacion personal</h2>
-<form action="">
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.idUsuario}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.nombres}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.apellidos}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.correo}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.password}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.identificacion}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.telefono}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.direccion}}">
-
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.fechaNacimiento}}">
-
-    
-    <label for="">ID</label>
-    <input type="text" name="id" id="id" value="{{usuario.rol}}">
-</form>
-
+<div>
+    <app-menu-cliente></app-menu-cliente>
+    <div class="container-fluid">
+        <div class="row">
+            <h2 style="text-align: center;">Informacion personal</h2>
+            <form >
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">ID</label>
+                        <input type="text" name="id" id="id" value="{{usuario.idUsuario}}" class="form-control" readonly>
         
+                        <label for="">Nombres</label>
+                        <input type="text" name="id" id="id" value="{{usuario.nombres}}"class="form-control" readonly>
+        
+                        <label for="">Apellidos</label>
+                        <input type="text" name="id" id="id" value="{{usuario.apellidos}}"class="form-control" readonly>
+        
+                        <label for="">Correo</label>
+                        <input type="text" name="id" id="id" value="{{usuario.correo}}"class="form-control" readonly>
+        
+                        <label for="">Password</label>
+                        <input type="text" name="id" id="id" value="{{usuario.password}}"class="form-control" readonly>
+        
+                    </div>
+                    <div class="col-6" style="margin-bottom: 5rem;">
+                        
+                <label for="">Identificacion</label>
+                <input type="text" name="id" id="id" value="{{usuario.identificacion}}"class="form-control" readonly>
+
+                <label for="">Telefono</label>
+                <input type="text" name="id" id="id" value="{{usuario.telefono}}"class="form-control" readonly>
+
+                <label for="">Direccion</label>
+                <input type="text" name="id" id="id" value="{{usuario.direccion}}"class="form-control" readonly>
+
+                <label for="">Fecha de nacimiento</label>
+                <input type="text" name="id" id="id" value="{{usuario.fechaNacimiento}}"class="form-control" readonly>
+
+
+                <label for="">Rol</label>
+                <input type="text" name="id" id="id" value="{{usuario.rol}}"class="form-control" readonly>
+                    </div>
+
+                </div>
+
+            </form>
+
+
+
+        </div>
 
     </div>
-
 </div>

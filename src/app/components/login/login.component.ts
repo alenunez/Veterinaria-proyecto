@@ -48,6 +48,9 @@ export class LoginComponent implements OnInit{
         }
 
       }
+      else{
+        alert("Usuario o contraseña incorrecta")
+      }
     })
   }
   getUsuario(){

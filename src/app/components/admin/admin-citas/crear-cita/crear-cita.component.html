@@ -1,8 +1,9 @@
 <app-menu-admin></app-menu-admin>
 <div class="container">
     <div class="row">
+        <h2 style="text-align: center;">Crear cita</h2>
 
-        <form (ngSubmit)="crearCita()" id="crear">
+        <form (ngSubmit)="crearCita()" id="crear" style="margin-top: 2rem;"  >
 
             <div class="row">
                 <div class="col-md-12">
@@ -13,7 +14,7 @@
             <br>
             <div class="row">
                 <div class="col-md-12">
-                    <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit"
+                    <input class="btn btn-succes float-right"style="background-color:#008080 ;" type="submit"
                         value="Crear">
                 </div>
             </div>
@@ -32,13 +33,13 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let user of usuarios | filter:filterPost ">
-                            <div *ngIf="user.rol=='veterinario'">
-                                <td>{{user.idUsuario}}</td>
-                                <td>{{user.nombres}}</td>
-                                <td>{{user.apellidos}}</td>
-                                <td> <button type="button" class="btn btn-primary"
+                            
+                                <td *ngIf="user.rol=='veterinario'">{{user.idUsuario}}</td>
+                                <td *ngIf="user.rol=='veterinario'">{{user.nombres}}</td>
+                                <td *ngIf="user.rol=='veterinario'">{{user.apellidos}}</td>
+                                <td *ngIf="user.rol=='veterinario'"> <button type="button" class="btn btn-primary" style="background-color:#008080 ;"
                                         (click)="guardarIdVeterinario(user)">Seleccionar Veterinario</button>
-                            </div>
+                            
 
                         </tr>
                     </tbody>
@@ -60,7 +61,7 @@
                             <td>{{pet.idMascota}}</td>
                             <td>{{pet.nombre}}</td>
                             <td>{{pet.usuario.nombres+" "+pet.usuario.apellidos}}</td>
-                            <td> <button type="button" class="btn btn-primary"
+                            <td> <button type="button" class="btn btn-primary" style="background-color:#008080 ;"
                                     (click)="guardarIdMascota(pet)">Seleccionar
                                     Mascota</button>
                         </tr>

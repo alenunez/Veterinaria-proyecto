@@ -1,48 +1,70 @@
-<app-menu-admin></app-menu-admin>
-<div class="container">
-    <div class="row">
-<h2 style="text-align: center;">Informacion personal</h2>
-<form   (ngSubmit)="actualizarUsuario()" id="actualizar" >
-    <label for="">ID</label>
-    <input type="number" name="idUsuario" id="idUsuario" value="{{usuario.idUsuario}}" [(ngModel)]="usuario.idUsuario" [ngModelOptions]="{standalone: true}" readonly class="form-control" >
+<div>
+    <app-menu-admin></app-menu-admin>
+    <div class="container-fluid">
+        <div class="row">
+            <h2 style="text-align: center;">Informacion personal</h2>
+            <form (ngSubmit)="actualizarUsuario()" id="actualizar" style="margin-bottom: 5rem;">
+                <div class="row">
+                <div class="col-6">
+                    <label for="">ID</label>
+                    <input type="number" name="idUsuario" id="idUsuario" value="{{usuario.idUsuario}}"
+                        [(ngModel)]="usuario.idUsuario" [ngModelOptions]="{standalone: true}" readonly
+                        class="form-control">
 
-    <label for="">Nombres</label>
-    <input type="text" name="nombres" id="nombres" value="{{usuario.nombres}}"[(ngModel)]="usuario.nombres" [ngModelOptions]="{standalone: true}" class="form-control">
+                    <label for="">Nombres</label>
+                    <input type="text" name="nombres" id="nombres" value="{{usuario.nombres}}"
+                        [(ngModel)]="usuario.nombres" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">Apellidos</label>
-    <input type="text" name="apellidos" id="apellidos" value="{{usuario.apellidos}}" [(ngModel)]="usuario.apellidos" [ngModelOptions]="{standalone: true}" class="form-control">
+                    <label for="">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos" value="{{usuario.apellidos}}"
+                        [(ngModel)]="usuario.apellidos" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">Correo</label>
-    <input type="text" name="correo" id="correo" value="{{usuario.correo}}"[(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" class="form-control">
-    <br>
-    <label for="">Password</label>
-    <input type="text" name="password" id="password" value="{{usuario.password}}"[(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}" class="form-control">
+                    <label for="">Correo</label>
+                    <input type="text" name="correo" id="correo" value="{{usuario.correo}}" [(ngModel)]="usuario.correo"
+                        [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">Identificacion</label>
-    <input type="text" name="identificacion" id="identificacion" value="{{usuario.identificacion}}"[(ngModel)]="usuario.identificacion" [ngModelOptions]="{standalone: true}" class="form-control">
+                    <label for="">Password</label>
+                    <input type="text" name="password" id="password" value="{{usuario.password}}"
+                        [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}" class="form-control">
+                </div>
+                <div class="col-6">
+                     <label for="">Identificacion</label>
+                    <input type="text" name="identificacion" id="identificacion" value="{{usuario.identificacion}}"
+                        [(ngModel)]="usuario.identificacion" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">Telefono</label>
-    <input type="text" name="telefono" id="telefono" value="{{usuario.telefono}}"[(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" class="form-control">
+                    <label for="">Telefono</label>
+                    <input type="text" name="telefono" id="telefono" value="{{usuario.telefono}}"
+                        [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">direccion</label>
-    <input type="text" name="direccion" id="direccion" value="{{usuario.direccion}}" [(ngModel)]="usuario.direccion" [ngModelOptions]="{standalone: true}" class="form-control">
+                    <label for="">direccion</label>
+                    <input type="text" name="direccion" id="direccion" value="{{usuario.direccion}}"
+                        [(ngModel)]="usuario.direccion" [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <label for="">Fecha de nacimiento</label>
-    <input type="text" name="fechaNacimiento" id="fechaNacimiento" value="{{usuario.fechaNacimiento}}" [(ngModel)]="usuario.fechaNacimiento" [ngModelOptions]="{standalone: true}" class="form-control">
+                    <label for="">Fecha de nacimiento</label>
+                    <input type="text" name="fechaNacimiento" id="fechaNacimiento" value="{{usuario.fechaNacimiento}}"
+                        [(ngModel)]="usuario.fechaNacimiento" [ngModelOptions]="{standalone: true}"
+                        class="form-control">
 
-    
-    <label for="">Rol</label>
-    <input type="text" name="rol" id="rol" value="{{usuario.rol}}" [(ngModel)]="usuario.rol" class="form-control">
 
-    <div class="row">
-        <div class="col-md-12">
-            <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit" value="Actualizar">
+                    <label for="">Rol</label>
+                    <input type="text" name="rol" id="rol" value="{{usuario.rol}}" [(ngModel)]="usuario.rol"
+                        class="form-control">
+                </div>
+            </div>
+
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <input class="btn btn-primary" style="background-color: #008080;"  type="submit"
+                            value="Actualizar">
+                    </div>
+                </div>
+            </form>
+
+
+
         </div>
-    </div>
-</form>
-
-        
 
     </div>
-
 </div>

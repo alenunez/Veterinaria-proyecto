@@ -1,90 +1,94 @@
-<app-menu-admin></app-menu-admin>
-<div class="container">
-  <div class="row">
+<div>
+  <app-menu-admin></app-menu-admin>
+  <div class="container-fluid">
+    <div class="row">
+      <form (ngSubmit)="actualizarUsuario()" id="actualizar">
+        <div class="row">
+          <div class="col-6">
+            <label for="id">ID</label>
+            <input type="number" name="id" id="id" value="{{usuario.idUsuario}}" [(ngModel)]="usuario.idUsuario"
+              [ngModelOptions]="{standalone: true}" readonly class="form-control">
 
-    <table class="table table-dark">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Apellido</th>
-          <th scope="col">Correo</th>
-          <th scope="col">Rol</th>
+            <label for="nombres">Nombres</label>
+            <input type="text" name="nombres" id="nombres" value="{{usuario.nombres}}" [(ngModel)]="usuario.nombres"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-        </tr>
-      </thead>
-      <tbody style="background-color: black;">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" value="{{usuario.apellidos}}" [(ngModel)]="usuario.apellidos"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-        <td>{{usuario.idUsuario}}</td>
-        <td>{{usuario.nombres}}</td>
-        <td>{{usuario.apellidos}}</td>
-        <td>{{usuario.correo}}</td>
-        <td>{{usuario.rol}}</td>
-      </tbody>
-    </table>
+            <label for="correo">Correo</label>
+            <input type="text" value="{{usuario.correo}}" [(ngModel)]="usuario.correo"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-    <form (ngSubmit)="actualizarUsuario()" id="actualizar">
-      <label for="id">ID</label>
-      <input type="number" name="id" id="id" value="{{usuario.idUsuario}}" [(ngModel)]="usuario.idUsuario"
-        [ngModelOptions]="{standalone: true}" readonly>
 
-      <label for="nombres">Nombres</label>
-      <input type="text" name="nombres" id="nombres" value="{{usuario.nombres}}" [(ngModel)]="usuario.nombres"
-        [ngModelOptions]="{standalone: true}">
+            <label for="correo">Identificacion</label>
+            <input type="text" value="{{usuario.identificacion}}" [(ngModel)]="usuario.identificacion"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-      <label for="apellidos">Apellidos</label>
-      <input type="text" value="{{usuario.apellidos}}" [(ngModel)]="usuario.apellidos"
-        [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-6">
+            <label for="correo">Telefono</label>
+            <input type="text" value="{{usuario.telefono}}" [(ngModel)]="usuario.telefono"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-      <label for="correo">Correo</label>
-      <input type="text" value="{{usuario.correo}}" [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}">
+            <label for="correo">Direccion</label>
+            <input type="text" value="{{usuario.direccion}}" [(ngModel)]="usuario.direccion"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-      <br>
-      <label for="correo">Identificacion</label>
-      <input type="text" value="{{usuario.identificacion}}" [(ngModel)]="usuario.identificacion"
-        [ngModelOptions]="{standalone: true}">
+            <label for="correo">Rol</label>
+            <input type="text" value="{{usuario.rol}}" [(ngModel)]="usuario.rol" [ngModelOptions]="{standalone: true}"
+              class="form-control">
 
-      <label for="correo">Telefono</label>
-      <input type="text" value="{{usuario.telefono}}" [(ngModel)]="usuario.telefono"
-        [ngModelOptions]="{standalone: true}">
+            <label for="correo">Password</label>
+            <input type="text" value="{{usuario.password}}" [(ngModel)]="usuario.password"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-      <label for="correo">Direccion</label>
-      <input type="text" value="{{usuario.direccion}}" [(ngModel)]="usuario.direccion"
-        [ngModelOptions]="{standalone: true}">
+            <label for="correo">Fecha de nacimiento</label>
+            <input type="text" value="{{usuario.fechaNacimiento}}" [(ngModel)]="usuario.fechaNacimiento"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-      <label for="correo">Rol</label>
-      <input type="text" value="{{usuario.rol}}" [(ngModel)]="usuario.rol" [ngModelOptions]="{standalone: true}">
+          </div>
 
+        </div>
+
+
+        <div class="row">
+          <div class="col-6">
+            <button type="button" class="btn btn-primary"  style="background-color: #008080;"  (click)="eliminar()">Eliminar usuario</button>
+          </div>
+          <div class="col-6">
+            <input class="btn btn-succes float-right" style="background-color: #008080;"  type="submit" value="Actualizar">
+
+          </div>
+        </div>
+      </form>
+      <h3 style="text-align: center;">Mascotas</h3>
       <div class="row">
-        <div class="col-6">
-          <button type="button" class="btn btn-primary" (click)="eliminar()">Eliminar usuario</button>
+        <div class="col-12">
+          <table class="table table-bordered">
+            <thead>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Fecha de nacimiento</th>
+              <th></th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of mascotas">
+                <td>{{user.idMascota}}</td>
+                <td>{{user.nombre}}</td>
+                <td>{{user.fechaNacimiento}}</td>
+    
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="col-6">
-          <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit" value="Actualizar">
 
-        </div>
-      </div>
-    </form>
-    <table class="table table-bordered">
-      <thead>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Fecha de nacimiento</th>
-        <th></th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of mascotas">
-          <td>{{user.idMascota}}</td>
-          <td>{{user.nombre}}</td>
-          <td>{{user.fechaNacimiento}}</td>
-
-        </tr>
-      </tbody>
-
-    </table>
+    </div>
 
 
+
+    </div>
 
   </div>
-
 </div>

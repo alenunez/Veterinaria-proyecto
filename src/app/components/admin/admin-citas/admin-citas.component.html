@@ -1,38 +1,45 @@
-<app-menu-admin></app-menu-admin>
-<div class="container">
-    <div class="row">
+<div>
+  <app-menu-admin></app-menu-admin>
+  <div class="container-fluid">
+    <div class="row" style="margin-top: 2rem;">
+      <div class="6">
+        <button type="button" class="btn btn-primary" style="background-color: #008080;"  (click)="crearCita()">Nueva cita</button>
 
-        <button type="button" class="btn btn-primary" (click)="crearCita()" >Nueva cita</button>
-        <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Cliente</th>
-                <th scope="col">Mascota</th>
-                <th scope="col">Veterinario</th>
-                <th scope="col">Fecha</th>
-                <th></th>
-        
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let cita of citas">
-                <td>{{cita.idCita}}</td>
-                <td>{{cita.mascota.nombre}}</td>
-                <td>{{cita.mascota.usuario.nombres+" "+cita.mascota.usuario.apellidos}}</td>
-                <td>{{cita.usuario.nombres+" "+cita.usuario.apellidos}}</td>
-                <td>{{cita.fecha}}</td>
-                <td> <button type="button" class="btn btn-primary" (click)="verCita(cita)">Ver cita</button>
+      </div>
 
-        
-              </tr>
-        
-        
-            </tbody>
-          </table>
+      <div class="12">
+      <table class="table table-bordered" style="margin-bottom: 5rem;" >
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Mascota</th>
+            <th scope="col">Veterinario</th>
+            <th scope="col">Fecha</th>
+            <th></th>
 
-        
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cita of citas">
+            <td>{{cita.idCita}}</td>
+            <td>{{cita.mascota.nombre}}</td>
+            <td>{{cita.mascota.usuario.nombres+" "+cita.mascota.usuario.apellidos}}</td>
+            <td>{{cita.usuario.nombres+" "+cita.usuario.apellidos}}</td>
+            <td>{{cita.fecha}}</td>
+            <td> <button type="button" class="btn btn-primary" style="background-color: #008080;"    (click)="verCita(cita)">Ver cita</button>
+
+
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+
 
     </div>
 
+  </div>
 </div>

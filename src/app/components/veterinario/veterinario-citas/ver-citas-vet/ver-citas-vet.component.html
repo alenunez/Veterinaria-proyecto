@@ -1,66 +1,76 @@
-<app-menu-veterinario></app-menu-veterinario>
-<div class="container">
+<div>
+  <app-menu-veterinario></app-menu-veterinario>
+  <div class="container-fluid">
     <div class="row">
 
-        <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Fecha </th>
-                <th scope="col">ID Mascota</th>
-                <th scope="col">Mascota</th>
-                <th scope="col">Id dueño</th>
-                <th scope="col">Dueño</th>
-                <th scope="col">Id veterinario</th>
-                <th scope="col">Veterinario</th>
-        
-              </tr>
-            </thead>
-            <tbody style="background-color: black;">
-         
-                <td>{{cita.idCita}}</td>
-                <td>{{cita.fecha}}</td>
-                <td>{{cita.mascota.idMascota}}</td>
-                <td>{{cita.mascota.nombre}}</td> 
-                <td>{{cita.mascota.usuario.idUsuario}}</td>
-                <td>{{cita.mascota.usuario.nombres+" "+cita.mascota.usuario.apellidos}}</td>
-                <td>{{cita.usuario.idUsuario}}</td>
-                <td>{{cita.usuario.nombres+" "+cita.usuario.apellidos}}</td>
+      <form (ngSubmit)="actualizarCita()" id="actualizar" style="margin-bottom: 5rem;">
+        <div class="row">
+          <div class="col-6">
+            <label for="id">ID</label>
+            <input type="number" name="id" id="id" value="{{cita.idCita}}" [(ngModel)]="citaMedica.idCita"
+              [ngModelOptions]="{standalone: true}" readonly class="form-control">
 
-            </tbody>
-          </table>
-          <form action="">
-              <label for="id">ID</label>
-          <input type="number" name="id" id="id" value="{{cita.idCita}}">
+            <label for="nombres">Fecha</label>
+            <input type="text" name="nombres" id="nombres" value="{{cita.fecha}}" [(ngModel)]="citaMedica.fecha"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-          <label for="nombres">Fecha</label>
-          <input type="text" name="nombres" id="nombres" value="{{cita.fecha}}">
+            <label for="apellidos">ID mascota</label>
+            <input type="number" value="{{cita.mascota.idMascota}}" [(ngModel)]="citaMedica.mascota.idMascota"
+              [ngModelOptions]="{standalone: true}" class="form-control">
 
-          <label for="apellidos">ID mascota</label>
-          <input type="number" value="{{cita.mascota.idMascota}}">
+            <label for="correo">Nombre mascota</label>
+            <input type="text" value="{{cita.mascota.nombre}}" [(ngModel)]="citaMedica.mascota.nombre"
+              [ngModelOptions]="{standalone: true}" readonly class="form-control">
 
-          <label for="correo">Nombre mascota</label>
-          <input type="text" value="{{cita.mascota.nombre}}">
+              <label for="correo">Diagnostico</label>
+              <input type="text" value="{{cita.diagnostico}}"
+                [(ngModel)]="cita.diagnostico" [ngModelOptions]="{standalone: true}" 
+                class="form-control">
 
-          <br>
-          <label for="correo">ID dueño</label>
-          <input type="number" value="{{cita.mascota.usuario.idUsuario}}">
+          </div>
+          <div class="col-6"> <label for="correo">ID dueño</label>
+            <input type="number" value="{{cita.mascota.usuario.idUsuario}}"
+              [(ngModel)]="citaMedica.mascota.usuario.idUsuario" [ngModelOptions]="{standalone: true}" readonly
+              class="form-control">
 
-          <label for="correo">Nombre dueño</label>
-          <input type="text" value="{{cita.mascota.usuario.nombres+' '+ cita.mascota.usuario.apellidos}}">
+            <label for="correo">Nombre dueño</label>
+            <input type="text" value="{{cita.mascota.usuario.nombres+' '+ cita.mascota.usuario.apellidos}}"
+              [(ngModel)]="citaMedica.mascota.usuario.nombres" [ngModelOptions]="{standalone: true}" readonly
+              class="form-control">
 
-          <label for="correo">ID Veterinario</label>
-          <input type="number" value="{{cita.usuario.idUsuario}}">
-            <br>
-          <label for="correo">Nombre Veterinario</label>
-          <input type="text" value="{{cita.usuario.nombres+' '+cita.usuario.apellidos}}">
+            <label for="correo">ID Veterinario</label>
+            <input type="number" value="{{cita.usuario.idUsuario}}" [(ngModel)]="citaMedica.usuario.idUsuario"
+              [ngModelOptions]="{standalone: true}" readonly class="form-control">
 
+            <label for="correo">Nombre Veterinario</label>
+            <input type="text" value="{{cita.usuario.nombres+' '+cita.usuario.apellidos}}"
+              [(ngModel)]="citaMedica.mascota.usuario.nombres" [ngModelOptions]="{standalone: true}" readonly
+              class="form-control">
 
-        </form>
-        <button type="button" class="btn btn-primary" (click)="eliminar()" >Eliminar cita</button>
+              <label for="correo">Tratamiento</label>
+              <input type="text" value="{{cita.tratamiento}}"
+                [(ngModel)]="cita.tratamiento" [ngModelOptions]="{standalone: true}" 
+                class="form-control">
+          </div>
+
+        </div>
 
 
+        <div class="row">
 
-    </div>  
+          <div class="col-6">
+            <input class="btn btn-succes float-right" style="background-color: #008080;"  type="submit" value="Actualizar">
+          </div>
 
+
+
+        </div>
+
+      </form>
+
+
+
+    </div>
+
+  </div>
 </div>

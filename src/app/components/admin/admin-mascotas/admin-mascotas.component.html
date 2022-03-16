@@ -1,35 +1,42 @@
-<app-menu-admin></app-menu-admin>
-<div class="container">
-    <div class="row">
+<div>
+  <app-menu-admin></app-menu-admin>
+  <div class="container-fluid">
+    <div class="row" style="margin-top: 2rem;">
+      <div class="col-14">
+        <button type="button" class="btn btn-primary"  style="background-color: #008080;" (click)="crearMascota()">Nueva mascota</button>
 
-        <button type="button" class="btn btn-primary" (click)="crearMascota()" >Nueva mascota</button>
-        <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Dueño</th>
-                <th></th>
-        
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let pet of mascotas">
-                <td>{{pet.idMascota}}</td>
-                <td>{{pet.nombre}}</td>
-                <td>{{pet.usuario.nombres + " "+pet.usuario.apellidos}}</td>
+      </div>
 
-                <td> <button type="button" class="btn btn-primary" (click)="verMascota(pet)">Ver Mascota</button>
+      <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Dueño</th>
+            <th></th>
 
-        
-              </tr>
-        
-        
-            </tbody>
-          </table>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pet of mascotas">
+            <td>{{pet.idMascota}}</td>
+            <td>{{pet.nombre}}</td>
+            <td>{{pet.usuario.nombres + " "+pet.usuario.apellidos}}</td>
 
-        
+            <td> <button type="button" class="btn btn-primary" style="background-color: #008080;"  (click)="verMascota(pet)">Ver Mascota</button>
+
+
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+
 
     </div>
 
+  </div>
 </div>

@@ -1,57 +1,38 @@
+<div>
 <app-menu-admin></app-menu-admin>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
 
-        <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Fecha de nacimiento</th>
-                <th scope="col">Id dueño</th>
-                <th scope="col">Dueño</th>
-        
-              </tr>
-            </thead>
-            <tbody style="background-color: black;">
-         
-                <td>{{mascota.idMascota}}</td>
-                <td>{{mascota.nombre}}</td>
-                <td>{{mascota.fechaNacimiento}}</td>
-                <td>{{mascota.usuario.idUsuario}}</td> 
-                <td>{{mascota.usuario.nombres +" "+mascota.usuario.apellidos}}</td>
-            </tbody>
-          </table>
 
 
-          <form (ngSubmit)="actualizarMascota()" id="actualizar">
+          <form (ngSubmit)="actualizarMascota()" id="actualizar" style="margin-bottom: 5rem;">
               <label for="id">ID</label>
           <input type="number" name="id" id="id" value="{{mascota.idMascota}}" [(ngModel)]="mascota.idMascota"
-          [ngModelOptions]="{standalone: true}" readonly>
+          [ngModelOptions]="{standalone: true}" readonly class="form-control">
 
           <label for="nombres">Nombre</label>
           <input type="text" name="nombres" id="nombres" value="{{mascota.nombre}}" [(ngModel)]="mascota.nombre"
-          [ngModelOptions]="{standalone: true}">
+          [ngModelOptions]="{standalone: true}"class="form-control">
 
           <label for="apellidos">Fecha de nacimiento</label>
           <input type="text" value="{{mascota.fechaNacimiento}}"[(ngModel)]="mascota.fechaNacimiento"
-          [ngModelOptions]="{standalone: true}">
+          [ngModelOptions]="{standalone: true}"class="form-control"class="form-control">
 
           <label for="correo">ID dueño</label>
           <input type="text" value="{{mascota.usuario.idUsuario}}"[(ngModel)]="mascota.usuario.idUsuario"
-          [ngModelOptions]="{standalone: true}" readonly >
+          [ngModelOptions]="{standalone: true}" readonly class="form-control" >
 
           <br>
           <label for="correo">Dueño</label>
           <input type="text" value="{{mascota.usuario.nombres+' '+mascota.usuario.apellidos}}" [(ngModel)]="mascota.usuario.nombres"
-          [ngModelOptions]="{standalone: true}" readonly>
+          [ngModelOptions]="{standalone: true}" readonly class="form-control">
 
           <div class="row">
             <div class="col-6">
-              <button type="button" class="btn btn-primary" (click)="eliminar()">Eliminar usuario</button>
+              <button type="button" class="btn btn-primary" style="background-color: #008080;"  (click)="eliminar()">Eliminar Mascota</button>
             </div>
             <div class="col-6">
-              <input class="btn btn-succes float-right" style="background-color: aqua;" type="submit" value="Actualizar">
+              <input class="btn btn-succes float-right" style="background-color: #008080;" type="submit" value="Actualizar">
     
             </div>
           </div>
@@ -61,4 +42,5 @@
 
     </div>
 
+</div>
 </div>

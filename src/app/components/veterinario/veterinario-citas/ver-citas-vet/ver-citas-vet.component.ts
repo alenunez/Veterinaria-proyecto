@@ -27,10 +27,20 @@ export class VerCitasVetComponent implements OnInit {
       console.log(this.citaMedica);
     })
   }
-  eliminar():void{
-    this.api.eliminarCita().subscribe();
-    alert("cita eliminada exitosamente.");
-    location.href="/adminCitas"
+
+  actualizarCita(){
+    let formulario:any = document.getElementById("actualizar");
+    let formularioValido:boolean = formulario.reportValidity();
+    if( formularioValido){
+      this.api.updateCita(this.citaMedica).subscribe(
+        data => this.confirmar(data)
+      )
+    }
+  }
+  confirmar(resultado:any){
+    
+      alert("Cita actualizada exitosamente.");
+ 
   }
 
 }
