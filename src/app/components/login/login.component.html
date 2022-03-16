@@ -1,30 +1,51 @@
+<div>
+    <app-menu></app-menu>
+    <div class="container-fluid">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"
+            id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+        <div class="row">
+            <div class="col-12">
+                <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+                    <!-- Overlay -->
+                    <div class="overlay"></div>
 
 
-<app-menu></app-menu>
-<div class="container-fluid">
-<div id="login" >
 
-    <div id="formLogin">
-        <form [formGroup]="loginForm"  (ngSubmit)="onLogin()"  id="login" >
-            <div class="row">
-                <div class="col-md-12">
-                    <input type="text" [(ngModel)]="correo"  class="form-control" placeholder="Correo" required formControlName="correo">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item slides active">
+                            <div> <img src="../../../assets/Niña.jpg" alt=""></div>
+                            <div class="hero">
+                                <form [formGroup]="loginForm"  (ngSubmit)="onLogin()"  id="login" >
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="text" [(ngModel)]="correo"  class="form-control" placeholder="Correo" required formControlName="correo">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="password" [(ngModel)]="password"   placeholder="password" class="form-control" required formControlName="password">
+                                        </div>
+                                    </div>
+                            
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input class="btn btn-primary" type="submit" value="Ingresar">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <br>
-            <div class="row">
-                <div class="col-md-12">
-                    <input type="password" [(ngModel)]="password"   placeholder="password" class="form-control" required formControlName="password">
-                </div>
-            </div>
-    
-            <br>
-            <div class="row">
-                <div class="col-md-12">
-                    <input class="btn btn-succes float-right" type="submit" value="Ingresar">
-                </div>
-            </div>
-        </form>
+        </div>
+
     </div>
-</div>
-</div>
+</div>  
